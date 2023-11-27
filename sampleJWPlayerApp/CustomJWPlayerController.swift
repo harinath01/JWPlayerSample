@@ -1,8 +1,27 @@
+// swiftlint:disable all
+//  CustomFullScreenViewController.swift
+//  VideoPlayerKit
 //
-//  CustomJWPlayerController.swift
-//  sampleJWPlayerApp
-//
-//  Created by Testpress on 25/11/23.
+//  Created by Ateeq  Ahmad on 02/03/23.
 //
 
-import Foundation
+import UIKit
+import JWPlayerKit
+
+class PlayerFullScreenViewController: JWFullScreenViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        displayInLandscape = true
+        if #available(iOS 16, *) {
+            DispatchQueue.main.async {
+                let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
+                self.setNeedsUpdateOfSupportedInterfaceOrientations()
+                self.navigationController?.setNeedsUpdateOfSupportedInterfaceOrientations()
+                windowScene?.requestGeometryUpdate(.iOS(interfaceOrientations: .landscapeRight))
+            }
+        } else {
+            displayInLandscape = true
+        }
+    }
+    
+}

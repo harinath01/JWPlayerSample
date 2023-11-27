@@ -13,7 +13,24 @@
 		031013F22B11E08600539E37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 031013F02B11E08600539E37 /* Main.storyboard */; };
 		031013F42B11E08A00539E37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 031013F32B11E08A00539E37 /* Assets.xcassets */; };
 		031013F72B11E08A00539E37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 031013F52B11E08A00539E37 /* LaunchScreen.storyboard */; };
+		031014082B11E35F00539E37 /* JWPlayerKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 031014042B11E24000539E37 /* JWPlayerKit.xcframework */; };
+		031014092B11E35F00539E37 /* JWPlayerKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 031014042B11E24000539E37 /* JWPlayerKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0310140B2B1210DC00539E37 /* CustomJWPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0310140A2B1210DB00539E37 /* CustomJWPlayerController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		031014072B11E24000539E37 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				031014092B11E35F00539E37 /* JWPlayerKit.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		031013E72B11E08600539E37 /* sampleJWPlayerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sampleJWPlayerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +41,8 @@
 		031013F32B11E08A00539E37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		031013F62B11E08A00539E37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		031013F82B11E08A00539E37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		031014042B11E24000539E37 /* JWPlayerKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = JWPlayerKit.xcframework; path = "../../Downloads/jwplayer-ios-sdk-4.17.0_14/JWPlayerKit.xcframework"; sourceTree = "<group>"; };
+		0310140A2B1210DB00539E37 /* CustomJWPlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomJWPlayerController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				031014082B11E35F00539E37 /* JWPlayerKit.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +62,7 @@
 			children = (
 				031013E92B11E08600539E37 /* sampleJWPlayerApp */,
 				031013E82B11E08600539E37 /* Products */,
+				031013FE2B11E11E00539E37 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +84,17 @@
 				031013F32B11E08A00539E37 /* Assets.xcassets */,
 				031013F52B11E08A00539E37 /* LaunchScreen.storyboard */,
 				031013F82B11E08A00539E37 /* Info.plist */,
+				0310140A2B1210DB00539E37 /* CustomJWPlayerController.swift */,
 			);
 			path = sampleJWPlayerApp;
+			sourceTree = "<group>";
+		};
+		031013FE2B11E11E00539E37 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				031014042B11E24000539E37 /* JWPlayerKit.xcframework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +107,7 @@
 				031013E32B11E08600539E37 /* Sources */,
 				031013E42B11E08600539E37 /* Frameworks */,
 				031013E52B11E08600539E37 /* Resources */,
+				031014072B11E24000539E37 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -140,6 +171,7 @@
 			files = (
 				031013EF2B11E08600539E37 /* ViewController.swift in Sources */,
 				031013EB2B11E08600539E37 /* AppDelegate.swift in Sources */,
+				0310140B2B1210DC00539E37 /* CustomJWPlayerController.swift in Sources */,
 				031013ED2B11E08600539E37 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,8 +325,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -321,8 +353,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
